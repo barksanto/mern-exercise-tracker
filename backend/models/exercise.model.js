@@ -11,7 +11,7 @@ const exerciseSchema = new Schema({
   {
     timestamps: true
   });
-
+// need to add api endpoint routes so the server can be used to perform the CRUD operations
 const Exercise = mongoose.model('Exercise', exerciseSchema);
 
 module.exports = Exercise;

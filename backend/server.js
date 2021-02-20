@@ -27,6 +27,14 @@ app.get('/', (req, res) => {
   res.status(200).json('Connected!')
 })
 
+
+const exercisesRouter = require('./routes/exercises')
+const usersRouter = require('./routes/users')
+
+// whenever we use the route and /exercises or /users at the end, it will use tht router
+app.use('/exercises', exercisesRouter);
+app.use('/users', usersRouter);
+
 app.listen(port, () => {
   console.log(`Server is running on port : ${port}`);
 })
