@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-let User = require('../models.user.model');
+let User = require('../models/user.model');
 
 // the first endpoint that handles http get requests
 router.route('/').get((req, res) => {
