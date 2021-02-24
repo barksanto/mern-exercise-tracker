@@ -5,7 +5,7 @@ let User = require('../models/user.model');
 // the first endpoint that handles incoming http get requests on the /users url path
 router.route('/').get((req, res) => {
   User.find() //find is a mongoose method that find all Users in db
-    .then(users = res.json(users))
+    .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 })
 
@@ -17,6 +17,6 @@ router.route('/add').post((req, res) => {
   newUser.save() // save user
     .then(() => res.json('User Added!')) // if user added
     .catch(err => res.status(400).json('Error: ' + err)); // if theres an arror
-})
+});
 
 module.exports = router;
