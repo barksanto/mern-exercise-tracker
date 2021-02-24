@@ -20,6 +20,7 @@ router.route('/add').post((req, res) => {
     date
   });
 
+  //  a promise jsut like users.js
   newExercise.save()
     .then(() => res.json('Exercise Added!'))
     .catch(err => res.status(400)).json('Error: ' + err)
