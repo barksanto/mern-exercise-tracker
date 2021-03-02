@@ -29,6 +29,20 @@ export default class CreateExercise extends Component {
     });
   }
 
+  onChangeDuration(e) {
+    this.setState({
+      // just updates the one element
+      duration: e.target.value
+    });
+  }
+
+  onChangeDateate(date) {
+    this.setState({
+      // just updates the one element
+      date: date
+    });
+  }
+
   render() {
     return (
       <div>
