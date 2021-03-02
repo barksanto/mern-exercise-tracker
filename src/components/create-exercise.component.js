@@ -11,7 +11,7 @@ export default class CreateExercise extends Component {
       description: '',
       duration: 0,
       date: new Date(),
-      users: []
+      users: [] //this will be a dropdown menu that have all users in the db already
     }
   }
 
