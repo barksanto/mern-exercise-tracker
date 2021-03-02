@@ -43,6 +43,19 @@ export default class CreateExercise extends Component {
     });
   }
 
+  onSubmit(e) {
+    e.preventDefault(); // prevents auto page refresh
+
+    const exercise = {
+      username: this.state.username,
+      description: this.state.description,
+      duration: this.state.duration,
+      date: this.state.date,
+    }
+    // this will be the part where we submit the exercise to the database.
+    console.log(exercise);
+  }
+
   render() {
     return (
       <div>
