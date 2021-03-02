@@ -6,6 +6,13 @@ export default class CreateExercise extends Component {
     //In js classes need to always call define a super when defining the consructor of a subclass
     super(props);
 
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeDescription = this.onChangeDescription.bind(this);
+    this.onChangeDuration = this.onChangeDuration.bind(this);
+    this.onChangeDate = this.onChangeDate.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+
     this.state = {
       username: '',
       description: '',
@@ -36,7 +43,7 @@ export default class CreateExercise extends Component {
     });
   }
 
-  onChangeDateate(date) {
+  onChangeDate(date) {
     this.setState({
       // just updates the one element
       date: date
