@@ -17,7 +17,15 @@ export default class CreateExercise extends Component {
 
   onChangeUsername(e) {
     this.setState({
+      // just updates the one element
       username: e.target.value
+    });
+  }
+
+  onChangeDescription(e) {
+    this.setState({
+      // just updates the one element
+      description: e.target.value
     });
   }
 
