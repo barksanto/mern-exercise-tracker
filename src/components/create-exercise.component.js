@@ -54,6 +54,8 @@ export default class CreateExercise extends Component {
     }
     // this will be the part where we submit the exercise to the database.
     console.log(exercise);
+    // once exercises are submitted - go back to list of exercises.
+    window.location = '/';
   }
 
   render() {
