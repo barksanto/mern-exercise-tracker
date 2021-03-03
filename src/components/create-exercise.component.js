@@ -86,6 +86,7 @@ export default class CreateExercise extends Component {
               onChange={this.onChangeUsername}>
               {
                 this.state.users.map(function (user) {
+                  // for each user, return them as an option for the input box
                   return <option
                     key={user}
                     value={user}>{user}
@@ -93,6 +94,35 @@ export default class CreateExercise extends Component {
                 })
               }
             </select>
+          </div>
+          <div className="form-group">
+            <label>Description: </label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              value={this.state.description}
+              onChange={this.onChangeDescription}
+            />
+          </div>
+          <div className="form-group">
+            <label>Duration: </label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              value={this.state.duration}
+              onChange={this.onChangeDuration}
+            />
+          </div>
+          <div className="form-group">
+            <label>Date: </label>
+            <div>
+              <DatePicker
+                selected={this.state.date}
+                onSelected={this.state.onChangeDate}
+              />
+            </div>
           </div>
         </form>
       </div>
