@@ -83,7 +83,16 @@ export default class CreateExercise extends Component {
               required
               className="form-control"
               value={this.state.username}
-              onChange={this.onChangeUsername} />
+              onChange={this.onChangeUsername}>
+              {
+                this.state.users.map(function (user) {
+                  return <option
+                    key={user}
+                    value={user}>{user}
+                  </option>
+                })
+              }
+            </select>
           </div>
         </form>
       </div>
