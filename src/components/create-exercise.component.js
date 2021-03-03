@@ -66,7 +66,7 @@ export default class CreateExercise extends Component {
       username: this.state.username,
       description: this.state.description,
       duration: this.state.duration,
-      date: this.state.date,
+      date: this.state.date
     }
     // this will be the part where we submit the exercise to the database.
     console.log(exercise);
@@ -125,6 +125,10 @@ export default class CreateExercise extends Component {
                 onSelected={this.state.onChangeDate}
               />
             </div>
+          </div>
+
+          <div className="form-group">
+            <input type="submit" value="Create Exercise Log" className="btn-primary" />
           </div>
         </form>
       </div>
