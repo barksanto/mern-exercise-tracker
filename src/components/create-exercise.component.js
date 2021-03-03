@@ -75,7 +75,12 @@ export default class CreateExercise extends Component {
   render() {
     return (
       <div>
-        <p>This is the Create Exercise Component!!</p>
+        <h3>Create New Exercise Log</h3>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+
+          </div>
+        </form>
       </div>
     )
   }
