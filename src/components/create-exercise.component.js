@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// this will aloow us to add exercises to the database
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+// this will allow us to add exercises to the database
 
 export default class CreateExercise extends Component {
   constructor(props) {
