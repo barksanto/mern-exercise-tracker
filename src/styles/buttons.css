@@ -1,0 +1,13 @@
+:root{
+  --btn-radius: 4px;
+}
+
+.edit{
+  border-radius: var(--btn-radius);
+  background-color: rgb(179, 62, 247);
+}
+
+.delete{
+  border-radius: var(--btn-radius);
+  background-color: rgb(245, 69, 38);
+}

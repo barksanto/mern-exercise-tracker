@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import "../styles/buttons.css"
 
 // this component is a functional react component
 // main diff is the lack of state and life cycle methods
@@ -13,7 +14,7 @@ const Exercise = props => (
     <td>
       {/* onclick will call props.deleteExercise thats passed as a prop from the other component */}
       {/* best practice is to make this a button instead of just a link */}
-      <Link to={"/edit/" + props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+      <Link to={"/edit/" + props.exercise._id}><button className="edit">edit</button></Link> | <button href="#" className="delete" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</button>
     </td>
   </tr>
 )
