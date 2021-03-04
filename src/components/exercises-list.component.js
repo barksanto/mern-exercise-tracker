@@ -11,6 +11,8 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0, 10)}</td>
     <td>
+      {/* onclick will call props.deleteExercise thats passed as a prop from the other component */}
+      {/* best practice is to make this a button instead of just a link */}
       <Link to={"/edit/" + props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
     </td>
   </tr>
