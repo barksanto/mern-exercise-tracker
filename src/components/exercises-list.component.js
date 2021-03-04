@@ -11,7 +11,7 @@ export default class ExercisesList extends Component {
     this.state = { exercises: [] }
   }
 
-  // code will ru nbefore page is rendered and add the list of exercises to the state
+  // code will run before page is rendered and add the list of exercises to the state
   componentDidMount() {
     axios.get('http://localhost:5000/exercises/')
       .then(response => {
@@ -20,6 +20,17 @@ export default class ExercisesList extends Component {
       .catch((error) => {
         console.log(error);
       })
+  }
+
+  // object id that we will be deleting
+  deleteExercise(id) {
+    axios.delete('http://localhost:5000/exercises' + id)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      // underscore is because thats the key value in mongodb
+      exercises: this.state.exercises.filter(element => element._id !== id)
+    })
   }
 
   render() {
