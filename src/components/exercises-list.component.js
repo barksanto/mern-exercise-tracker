@@ -24,7 +24,7 @@ export default class ExercisesList extends Component {
 
     this.deleteExercise = this.deleteExercise.bind(this);
 
-    this.state = { exercises: [] }
+    this.state = { exercises: [] };
   }
 
   // code will run before page is rendered and add the list of exercises to the state
@@ -40,7 +40,7 @@ export default class ExercisesList extends Component {
 
   // object id that we will be deleting
   deleteExercise(id) {
-    axios.delete('http://localhost:5000/exercises' + id)
+    axios.delete('http://localhost:5000/exercises/' + id)
       .then(res => console.log(res.data));
 
     this.setState({
