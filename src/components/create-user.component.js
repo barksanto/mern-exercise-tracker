@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -29,12 +30,13 @@ export default class CreateUser extends Component {
     }
     // this will be the part where we submit the exercise to the database.
     console.log(user);
+    axios.post('http://localhost:5000/users/add', user)
+      .then(result => console.log(result.data));
+
     // once exercises are submitted - go back to list of exercises.
     this.setState({
       username: ''
     })
-
-
   }
 
   render() {

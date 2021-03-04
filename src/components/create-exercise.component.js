@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 // this will allow us to add exercises to the database
@@ -70,8 +71,10 @@ export default class CreateExercise extends Component {
     }
     // this will be the part where we submit the exercise to the database.
     console.log(exercise);
+    axios.post('http://localhost:5000/exercises/add', exercise)
+      .then(res => console.log(res.data));
     // once exercises are submitted - go back to list of exercises.
-    window.location = '/';
+    window.location = '/create';
   }
 
   render() {
