@@ -79,3 +79,5 @@ export default class ExercisesList extends Component {
     )
   }
 }
+
+

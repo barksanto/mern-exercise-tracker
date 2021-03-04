@@ -114,6 +114,7 @@ export default class CreateExercise extends Component {
             <label>Description: </label>
             <input
               type="text"
+              placeholder="What did you do today?"
               required
               className="form-control"
               value={this.state.description}
