@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import "../styles/create-exercise.css"
 // this will allow us to add exercises to the database
 
 export default class CreateExercise extends Component {
@@ -89,7 +90,7 @@ export default class CreateExercise extends Component {
 
   render() {
     return (
-      <div>
+      <div className="new-exercise">
         <h3>Create New Exercise Log</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
