@@ -9,7 +9,7 @@ const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>
     <td>{props.exercise.description}</td>
-    <td>{props.exercise.duration}</td>
+    <td>{props.exercise.duration} mins</td>
     <td>{props.exercise.date.substring(0, 10)}</td>
     <td>
       {/* onclick will call props.deleteExercise thats passed as a prop from the other component */}
